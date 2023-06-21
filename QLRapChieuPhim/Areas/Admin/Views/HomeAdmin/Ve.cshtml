@@ -1,0 +1,95 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Ve";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using QLRapChieuPhim.Models;
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Ve>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="get" asp-action="Ve">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Mã vé: </label>
+                <input type="Text" class="form-control mx-sm-3" value="@ViewBag.Keyword" name="searchString" placeholder="Nhập mã vé">
+            </div>
+            <div class="form-group mt-1">
+                <input type="submit" value="Tìm mã vé" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<h1>Vé</h1>
+
+<p>
+    <a asp-action="ThemVe">Thêm vé</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã vé
+            </th>
+            <th>
+                Mã loại vé
+            </th>
+            <th>
+                Mã nhân viên
+            </th>
+            <th>
+                Mã khách hàng
+            </th>
+            <th>
+                Ghế
+            </th>
+            <th>
+                Ngày bán vé
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string cla = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            cla = "table-success";
+            i += 1;
+            if (i % 2 == 0)
+            {
+                cla = "table-warning";
+            }
+            <tr class="@cla">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaVe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaLv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaKh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ghe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayBanVe)
+                </td>
+                <td>
+                    <a asp-action="SuaVe" asp-route-maVe="@item.MaVe">Sửa</a> |
+                    <a asp-action="XoaVe" asp-route-maVe="@item.MaVe">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

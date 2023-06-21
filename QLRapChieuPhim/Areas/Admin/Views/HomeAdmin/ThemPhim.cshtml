@@ -1,0 +1,69 @@
+﻿@model QLRapChieuPhim.Models.Phim
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "ThemPhim";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Thêm phim</h1>
+
+<h4>Phim</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Admin" asp-action="ThemPhim">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaPhim" class="control-label">Mã phim</label>
+                <input asp-for="MaPhim" class="form-control" />
+                <span asp-validation-for="MaPhim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaLp" class="control-label">Loại phim</label>
+                <select asp-for="MaLp" class="form-control" asp-items="ViewBag.MaLp"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaDp" class="control-label">Dạng phim</label>
+                <select asp-for="MaDp" class="form-control" asp-items="ViewBag.MaDp"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenPhim" class="control-label">Tên phim</label>
+                <input asp-for="TenPhim" class="form-control" />
+                <span asp-validation-for="TenPhim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nsx" class="control-label">Nhà sản xuất</label>
+                <input asp-for="Nsx" class="form-control" />
+                <span asp-validation-for="Nsx" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnhDaiDien" class="control-label">Ảnh</label>
+                <input asp-for="AnhDaiDien" class="form-control" />
+                <span asp-validation-for="AnhDaiDien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoiDung" class="control-label">Nội dung</label>
+                <input asp-for="NoiDung" class="form-control" />
+                <span asp-validation-for="NoiDung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayKhoiChieu" class="control-label">Ngày khởi chiếu</label>
+                <input asp-for="NgayKhoiChieu" class="form-control" />
+                <span asp-validation-for="NgayKhoiChieu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaNuoc" class="control-label">Quốc gia</label>
+                <select asp-for="MaNuoc" class="form-control" asp-items="ViewBag.MaNuoc"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Admin" asp-action="Phim">Back to List</a>
+</div>
+

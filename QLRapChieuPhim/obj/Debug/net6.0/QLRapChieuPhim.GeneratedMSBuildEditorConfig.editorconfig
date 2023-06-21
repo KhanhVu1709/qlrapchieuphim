@@ -1,0 +1,265 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = QLRapChieuPhim
+build_property.RootNamespace = QLRapChieuPhim
+build_property.ProjectDir = E:\ASPNET\BTLPhim\Lượng\Mới\QLRapChieuPhim\QLRapChieuPhim\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\ASPNET\BTLPhim\Lượng\Mới\QLRapChieuPhim\QLRapChieuPhim
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ChiTietChieuPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENoaVRpZXRDaGlldVBoaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/KhachHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEtoYWNoSGFuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/NhanVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXE5oYW5WaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/Phim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFBoaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/SuaChiTiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUNoaVRpZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/SuaKhachHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUtoYWNoSGFuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/SuaNhanVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YU5oYW5WaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/SuaPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YVBoaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/SuaTaiKhoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YVRhaUtob2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/SuaVe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YVZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/TaiKhoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRhaUtob2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ThemChiTietCP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1DaGlUaWV0Q1AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ThemKhachHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1LaGFjaEhhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ThemNhanVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1OaGFuVmllbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ThemPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1QaGltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ThemTaiKhoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1UYWlLaG9hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/ThemVe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1WZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/HomeAdmin/Ve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Access/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Access/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/ChiTietDienVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0RGllblZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/ChiTietPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0UGhpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/ChonGhe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaG9uR2hlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/DienVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaWVuVmllbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/DienVienTheoQuocGia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaWVuVmllblRoZW9RdW9jR2lhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/GiaoDich.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaWFvRGljaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/GioChieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaW9DaGlldS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/HienThiGhe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaWVuVGhpR2hlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/MuaVes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNdWFWZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/PhimTheoGioChieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQaGltVGhlb0dpb0NoaWV1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/TheLoaiPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGVMb2FpUGhpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/ThemVe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGVtVmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Home/TimKiem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaW1LaWVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/Components/LoaiPhimMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haVBoaW1NZW51XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/Components/QuocGiaMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUXVvY0dpYU1lbnVcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/Components/QuocGiaPhimMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUXVvY0dpYVBoaW1NZW51XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/Components/VTCTMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVlRDVE1lbnVcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/GiaoDichKH.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdpYW9EaWNoS0guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/MuaVe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE11YVZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/PartialFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/PartialPhimDangchieuIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxQaGltRGFuZ2NoaWV1SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/PartialPhimDangchieuPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxQaGltRGFuZ2NoaWV1UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/PartialPhimSapChieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxQaGltU2FwQ2hpZXUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_LayoutDienVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREaWVuVmllbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_LayoutPhimDangChieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQaGltRGFuZ0NoaWV1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_LayoutPhimSapChieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQaGltU2FwQ2hpZXUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_LayoutRapChieuPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRSYXBDaGlldVBoaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_LayoutTLPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUTFBoaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_PartialDienVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsRGllblZpZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_PartialMuaVeNhanh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsTXVhVmVOaGFuaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_PartialNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsTmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_PartialTheLoaiPhim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVGhlTG9haVBoaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_PartialTrangLoaiVe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsVHJhbmdMb2FpVmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ASPNET/BTLPhim/Lượng/Mới/QLRapChieuPhim/QLRapChieuPhim/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-md6yoed76r

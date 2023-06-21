@@ -1,0 +1,97 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Phim";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using QLRapChieuPhim.Models;
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Phim>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="get" asp-action="Phim">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Tên phim: </label>
+                <input type="Text" class="form-control mx-sm-3" value="@ViewBag.Keyword" name="searchString" placeholder="Nhập tên phim">
+            </div>
+            <div class="form-group mt-1">
+                <input type="submit" value="Tìm tên phim" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<h1>Phim</h1>
+
+<p>
+    <a asp-controller="admin" asp-action="ThemPhim">Thêm mới phim</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên phim
+            </th>
+            <th>
+                Nhà sản xuất
+            </th>
+            <th>
+                Ảnh đại diện
+            </th>
+            <th>
+                Nội dung
+            </th>
+            <th>
+                Ngày khởi chiếu
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string cla = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            cla = "table-success";
+            i += 1;
+            if (i % 2 == 0)
+            {
+                cla = "table-warning";
+            }
+            <tr class="@cla">
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenPhim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nsx)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.AnhDaiDien)*@
+                    <img style="width: 300px;" src="@Url.Content("~/film/images/"+item.AnhDaiDien)">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoiDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayKhoiChieu)
+                </td>
+                <td>
+                    <a asp-action="SuaPhim" asp-route-maPhim="@item.MaPhim">Sửa</a>
+                    <a asp-action="XoaPhim" asp-route-maPhim="@item.MaPhim">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="margin: 0 auto">
+    @Html.PagedListPager(Model,page => Url.Action("Phim", new {page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
+    LiElementClasses = new List<String> {"page-item"},
+    PageClasses = new List<String> {"page-link"}
+    })
+</div>

@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "HienThiGhe";
+    int i = 0;
+}
+
+@model List<Ghe>
+
+<ul class="seat-row ng-scope"
+    ng-repeat="seatRow in seatGroup.rows">
+    <li class="ng-binding index">A</li>
+    <li class="seat-col-wrapper" style="width: 493px;">
+        <ul class="seat-col">
+            @for (int j = 0; j < Model.Count(); j++)
+            {
+                if (@Model[j].MaGhe.Substring(0, 1) == "A")
+                {
+                    @*int a = 0;
+            if (@Model.Count(x=>x.MaGhe==))
+            {
+            a++;
+            }*@
+                    var num = 0 + 110 * j;
+                    <li style="transform: translate(@num%, 0);"
+                        ng-repeat="seatCol in seatRow.seats"
+                        ng-class="checkSeat(seatCol.seatCol,seatCol.seatRow.physicalName,seatCol.seatGroup)"
+                        ng-click="selectSeat(seatCol.seatCol,seatCol.seatRow.physicalName,seatCol.seatGroup,seatCol.seatRow)"
+                        class="ng-binding ng-scope valiable">
+                        @Model[j].MaGhe
+                    </li>
+                }
+            }
+        </ul>
+    </li>
+</ul>
+<ul class="seat-row ng-scope"
+    ng-repeat="seatRow in seatGroup.rows">
+    <li class="ng-binding index">B</li>
+    <li class="seat-col-wrapper" style="width: 493px;">
+        <ul class="seat-col">
+            @for (int j = 0; j < Model.Count(); j++)
+            {
+                if (@Model[j].MaGhe.Substring(0, 1) == "B")
+                {
+                    var num = 0 + 110 * i;
+                    <li style="transform: translate(@num%, 0);"
+                        ng-repeat="seatCol in seatRow.seats"
+                        ng-class="checkSeat(seatCol.seatCol,seatCol.seatRow.physicalName,seatCol.seatGroup)"
+                        ng-click="selectSeat(seatCol.seatCol,seatCol.seatRow.physicalName,seatCol.seatGroup,seatCol.seatRow)"
+                        class="ng-binding ng-scope valiable">
+                        @Model[j].MaGhe
+                    </li>
+                    i++;
+                }
+            }
+        </ul>
+    </li>
+</ul>
+

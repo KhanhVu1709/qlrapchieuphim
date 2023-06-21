@@ -1,0 +1,54 @@
+﻿@model QLRapChieuPhim.Models.Ve
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "ThemVe";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Thêm vé</h1>
+
+<h4>Vé</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="ThemVe">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaVe" class="control-label">Mã Vé</label>
+                <input asp-for="MaVe" class="form-control" />
+                <span asp-validation-for="MaVe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaLv" class="control-label">Loại vé</label>
+                <select asp-for="MaLv" class="form-control" asp-items="ViewBag.MaLv"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaNv" class="control-label">Nhân viên</label>
+                <select asp-for="MaNv" class="form-control" asp-items="ViewBag.MaNv"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaKh" class="control-label">Khách hàng</label>
+                <select asp-for="MaKh" class="form-control" asp-items="ViewBag.MaKh"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ghe" class="control-label">Ghế</label>
+                <input asp-for="Ghe" class="form-control" />
+                <span asp-validation-for="Ghe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayBanVe" class="control-label">Ngày bán vé</label>
+                <input asp-for="NgayBanVe" class="form-control" />
+                <span asp-validation-for="NgayBanVe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="admin" asp-action="Ve">Back to List</a>
+</div>
+

@@ -1,0 +1,101 @@
+﻿<div class="col-md-4 col-sm-4 col-xs-12">
+    <section id="getBuyTicket" class="hidden-xs">
+        <section ng-controller="quickBuyTicket" class="tabs-buyticket">
+            <div class="label-tab-buyticket">mua vé nhanh</div>
+            <div class="content-movie btn-box-select-ticket">
+                <form>
+                    <galaxy-select ng-model="byMovie"></galaxy-select>
+                    <galaxy-select ng-model="cinemaConfig"></galaxy-select>
+                    <galaxy-select ng-model="dateConfig"></galaxy-select>
+                    <galaxy-select ng-model="sessionConfig"></galaxy-select><a href="/home/muaves" id="loginBuyticket" ng-click="buyTicket()" class="btn primary fl-right btn-buyticket-box">Mua vé</a>
+                </form>
+            </div>
+        </section>
+    </section>
+    <section id="movieSidebar" class="hidden-xs">
+        <h3>Phim đang chiếu</h3>
+        <div class="row movies-group">
+            <div class="col-md-13 col-sm-12 col-xs-12 movie-item">
+                <div class="article-movie-home">
+                    <img src="https://cdn.galaxycine.vn/media/2023/2/10/shazam-2_1675998615953.jpg">
+                    <a href="../RapChieuPhim/dat-ve/shazam-fury-of-the-gods">
+                        <div class="decription-hover overlay">
+                            <div class="movies-content">
+                                <i class="icon-c13"></i>
+                                <div class="group">
+                                    <div class="btn secondary-white"><a href="/home/muaves">mua vé</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--article.article-movie(style='background-image: url(#{item.imageLandscape})')-->
+                <!--  figure-->
+                <!--    figcaption.overlay-->
+                <!--      .movies-content-->
+                <!--        i(class='#{getIcon(item.age)}')-->
+                <!--        .group-->
+                <!--          a.btn.secondary-white(href='#{getUrlMovieDetail(item.slug)}') #{i18n('mua vé')}-->
+                <div class="title-movie">
+                    <h4 class="upper-text">Shazam! Fury Of The Gods</h4>
+                    <h4 class="vn upper-text">Shazam! Cơn Thịnh Nộ Của Các Vị Thần</h4>
+                </div>
+            </div>
+            <div class="col-md-13 col-sm-12 col-xs-12 movie-item">
+                <div class="article-movie-home">
+                    <img src="https://cdn.galaxycine.vn/media/2023/3/3/450x300_1677813532298.jpg">
+                    <a href="../RapChieuPhim/dat-ve/sieu-lua-gap-sieu-lay">
+                        <div class="decription-hover overlay">
+                            <div class="movies-content">
+                                <i class="icon-c16"></i>
+                                <div class="group">
+                                    <div class="btn secondary-white"><a href="/home/muaves">mua vé</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--article.article-movie(style='background-image: url(#{item.imageLandscape})')-->
+                <!--  figure-->
+                <!--    figcaption.overlay-->
+                <!--      .movies-content-->
+                <!--        i(class='#{getIcon(item.age)}')-->
+                <!--        .group-->
+                <!--          a.btn.secondary-white(href='#{getUrlMovieDetail(item.slug)}') #{i18n('mua vé')}-->
+                <div class="title-movie">
+                    <h4 class="upper-text">Siêu Lừa Gặp Siêu Lầy</h4>
+                    <h4 class="vn upper-text"></h4>
+                </div>
+            </div>
+            <div class="col-md-13 col-sm-12 col-xs-12 movie-item">
+                <div class="article-movie-home">
+                    <img src="https://cdn.galaxycine.vn/media/2023/3/1/450x300_1677654112500.jpg">
+                    <a href="../RapChieuPhim/dat-ve/suzume-no-tojimari">
+                        <div class="decription-hover overlay">
+                            <div class="movies-content">
+                                <i></i>
+                                <div class="group">
+                                    <div class="btn secondary-white"><a href="/home/muaves">mua vé</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--article.article-movie(style='background-image: url(#{item.imageLandscape})')-->
+                <!--  figure-->
+                <!--    figcaption.overlay-->
+                <!--      .movies-content-->
+                <!--        i(class='#{getIcon(item.age)}')-->
+                <!--        .group-->
+                <!--          a.btn.secondary-white(href='#{getUrlMovieDetail(item.slug)}') #{i18n('mua vé')}-->
+                <div class="title-movie">
+                    <h4 class="upper-text">Suzume No Tojimari</h4>
+                    <h4 class="vn upper-text">Khóa Chặt Cửa Vào Suzume</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 pull-right"><a href="/home/_layoutphimdangchieu" class="btn secondary fl-right">Xem thêm</a></div>
+        </div>
+    </section>
+</div>

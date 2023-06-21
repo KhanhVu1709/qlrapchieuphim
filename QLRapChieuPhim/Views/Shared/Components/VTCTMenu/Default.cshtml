@@ -1,0 +1,18 @@
+﻿@using QLRapChieuPhim.Models;
+@model IEnumerable<GioChieu>
+
+<ul class="nav nav-tabs">
+    <div ng-repeat="bundle in date.bundles" class="showtimes-item ng-scope">
+        <label class="ng-binding">
+            2D - Phụ đề
+            </label>
+     </div>
+     <div>
+         @foreach(var item in Model){
+                <galaxy-buy-ticket ng-repeat="show in bundle.sessions" ng-model="show" ng-movie-slug="movies[currentMovie].slug">
+                <a href="/home/phimtheogiochieu?maGio=@item.MaGioChieu" class="showtimes-list ng-binding" name="gioChieu">@item.GioChieu1</a>
+                </galaxy-buy-ticket>
+        }
+    </div>
+</ul>
+		

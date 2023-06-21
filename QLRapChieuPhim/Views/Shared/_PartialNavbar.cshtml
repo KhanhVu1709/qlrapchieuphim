@@ -1,0 +1,192 @@
+﻿@inject IHttpContextAccessor httpContextAccessor
+@{
+    var username = httpContextAccessor.HttpContext.Session.GetString("username");
+    var loaiUser = httpContextAccessor.HttpContext.Session.GetString("LoaiUser");
+}
+<div class="wrapper">
+    <div ng-controller="headerController" ng-init="init(&quot;lich-chieu&quot;,&quot;lich-chieu&quot;,&quot;&quot;,undefined,undefined,undefined,undefined, undefined)" class="galaxy-header">
+        <div class="container">
+            <div class="row">
+                <div class="header-nav-wrapper">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="logo"><a rel="external" href="/"><img src="../RapChieuPhim/website/images/galaxy-logo.png" data-src="../RapChieuPhim/website/images/galaxy-logo.png" alt="Galaxy Cinema" class="lazy hidden-xs hidden-sm loaded" data-was-processed="true"><img src="../RapChieuPhim/website/images/template-logo.jpg" data-src="../RapChieuPhim/website/images/galaxy-logo-mobile.png" alt="Galaxy Cinema" class="lazy hidden-lg hidden-md"></a></div>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                        <div class="primary-nav-wrapper desktop hidden-xs hidden-sm">
+                            <div class="search">
+                                <div class="ng-isolate-scope">
+                                    <form class="search-form ng-pristine ng-valid" ng-submit="submit()">
+                                            <div class="input-append">
+                                                <input id="search-input" placeholder="Tìm tên phim, diễn viên..." class="search-box ng-pristine ng-untouched ng-valid ng-empty" type="text" autocomplete="off" ng-model="searchKey" ng-model-options="{ updateOn: &quot;default blur&quot;, debounce: { default: 500, blur: 0 } }" ,="" ng-change="search(searchKey)">
+                                                <button type="submit" class="search-btn" onclick="get();">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </button>
+                                                <!-- ngIf: dataSearch && dataSearch.items && dataSearch.items.length>0 -->
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="secondary-nav-wrapper">
+                                <ul class="secondary-nav">
+                                    <li>
+                                        @if (!string.IsNullOrEmpty(username))
+                                        {
+                                            <div class="dropdown">
+                                                <a rel="external" data-toggle="dropdown" aria-expanded="true" class="dropdown-toggle">
+                                                    <i class="icon-member"></i>
+                                                    <span id="username-placeholder">
+                                                        @username
+                                                    </span>
+                                                </a>
+                                                <div class="dropdown-menu">
+                                                    @if (loaiUser == null)
+                                                    {
+                                                        <a href="/home/giaodich" class="dropdown-item">Tài khoản</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="/admin/phim" class="dropdown-item">Admin page</a>
+                                                    }
+                                                    <a class="dropdown-item" href="/access/logout">Đăng xuất</a>
+                                                </div>
+                                            </div>
+                                        }
+                                    </li>
+                                    <!--li-->
+                                    <!--  a#locationLink(rel='external', href='#')-->
+                                    <!--    i.icon-place-->
+                                    <!--    | Chọn vị trí-->
+                                    <li class="language hidden-xs"><a rel="external" href="/lich-chieu" class="active">VN</a><span>|</span><a rel="external" href="/en/lich-chieu">EN</a></li>
+                                </ul>
+                            </div>
+                            <!--.search-wrapper-->
+                            <!--  ul.search-->
+                            <!--    li-->
+                            <!--      input#search-input(type='text', placeholder='Start typing then hit enter to search')-->
+                            <!--    li-->
+                            <!--      a.hide-search(rel='external', href='#')-->
+                            <!--        i.fa.fa-close-->
+                        </div>
+                        <div class="primary-nav-wrapper hidden-lg hidden-md">
+                            <div class="secondary-nav-wrapper">
+                                <ul class="secondary-nav">
+                                    <!--li-->
+                                    <!--  a(href)-->
+                                    <!--    i.icon-search-->
+                                    <!--li-->
+                                    <!--  a#locationLinkMobile(rel='external', href='#')-->
+                                    <!--    i.icon-place-->
+                                    <!--    | #{i18n('Chọn vị trí')}-->
+                                    <li>
+                                        @*<a id="loginLinkMobile" rel="external" href="#" ng-show="!userInfo.memberId" ng-click="openLogin()"><i class="icon-user"></i>Đăng nhập</a>*@
+                                        <div ng-if="userInfo.memberId" class="dropdown">
+                                            <a rel="external" data-toggle="dropdown" aria-expanded="true" class="dropdown-toggle">
+                                                <i class="icon-member"></i>
+                                                <span id="username-placeholder">
+                                                    @System.Environment.UserName
+                                                </span>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                @if(ViewBag.LoaiUser == "1")
+                                                {
+                                                    <a rel="external" href="/admin/index" class="dropdown-item">Admin</a>
+                                                }
+                                                <a class="dropdown-item" href="/access/logout">Thoát</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="gp-service-modal" style="z-index:1111;" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-outer-container">
+                        <div class="modal-middle-container">
+                            <div class="login-wrapper animated slideInDown">
+                                <div class="login-container">
+                                    <span ng-click="closeGPModal()" class="close"><i class="icon-cancel"></i></span>
+                                    <div ng-show="gpPopup" class="tab-login-line">
+                                        <div class="tab-login-title font-size-medium pb10 text-center">{{ gpPopup.title }}</div>
+                                        <div class="login-tab-wrapper">
+                                            <div class="login-heading">
+                                                <div class="text-heading text-popup-heading text-justify"><span class="sub-text font-size-large">{{ gpPopup.description }}</span></div>
+                                            </div>
+                                            <div class="row">
+                                                <div ng-repeat="button in gpPopup.buttonsList" class="col-sm-6"><button ng-class="{ 'primary-out': $first }" ng-click="clickButton(button)" class="btn primary input"><span>{{ button.text }}</span></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div ng-controller="navbarController" class="galaxy-nav">
+    <div class="container">
+        <div class="search hidden-lg hidden-md">
+                <div class="ng-isolate-scope">
+                    <form class="search-form ng-pristine ng-valid" ng-submit="submit()">
+                        <div class="input-append">
+                            <input placeholder="Tìm tên phim, diễn viên..." class="search-box ng-pristine ng-untouched ng-valid ng-empty" type="text" autocomplete="off" ng-model="searchKey" ng-model-options="{ updateOn: &quot;default blur&quot;, debounce: { default: 500, blur: 0 } }" ,="" ng-change="search(searchKey)">
+                            <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <!-- ngIf: dataSearch && dataSearch.items && dataSearch.items.length>0 -->
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <nav>
+            <ul class="primary-nav">
+                <li><a rel="external" href="/home/muaves">Mua vé</a></li>
+                <li class="sub-nav">
+                    <a rel="external" href="javascript:;">Phim</a>
+                    <div id="sub-menu">
+                        <ul class="undefined">
+                            <li><a rel="external" href="/home/_LayoutPhimDangChieu">Phim đang chiếu</a></li>
+                            <li><a rel="external" href="/home/_LayoutPhimSapChieu">Phim sắp chiếu</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a rel="external" href="/home/theloaiphim">Thể loại phim</a></li>
+                <li><a rel="external" href="/home/DienVien">Diễn viên</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    <script>
+        function get() {
+            var name = $('#search-input').val();
+            var getUrl = "https://localhost:7017/api/apitimkiem/" + name;
+            var str = '';
+            $.ajax({
+                type: 'GET',
+                url: getUrl,
+                dataType: 'json',
+                success: function (data) {
+                    $.each(data, function (key, val) {
+                        str += `<div class="col-md-4 col-sm-4 col-xs-6 movie-item">
+                                    <div class="article-movie-home">
+                                        <img style="width: 300px;" src="../../film/images/${val.anhDaiDien}" class="lazy" />
+                                    </div>
+
+                                    <div class="title-movie">
+                                        <h4 class="upper-text"><a href="/home/chitietphim?maPhim=${val.maPhim}">${val.tenPhim}</a></h4>
+                                    </div>
+                                </div>`
+                    });
+                    $('#apiTimKiem').html(str);
+                },
+                Error: function (xhr) {
+                    alert(xhr.responText);
+                }
+            });
+        }
+    </script>

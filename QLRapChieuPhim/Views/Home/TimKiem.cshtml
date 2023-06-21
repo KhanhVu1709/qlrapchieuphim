@@ -1,0 +1,21 @@
+﻿@{
+	Layout = null;
+}
+
+@model List<Phim>
+
+<h2>Kết quả tìm kiếm cho "@ViewBag.SearchTerm"</h2>
+
+@if (Model.Count == 0)
+{
+    <p>Không tìm thấy sản phẩm phù hợp.</p>
+}
+else
+{
+    <ul>
+        @foreach (var product in Model)
+        {
+            <li>@product.TenPhim</li>
+        }
+    </ul>
+}

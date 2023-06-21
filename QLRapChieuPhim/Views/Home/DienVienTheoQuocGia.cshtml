@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "DienVienTheoQuocGia";
+    Layout = "_LayoutDienVien";
+}
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<DienVien>
+
+@foreach (var item in Model)
+{
+    @await Html.PartialAsync("_PartialDienVien", item)
+}
+
+<div style="margin: 0 auto">
+    @Html.PagedListPager(Model,page => Url.Action("DienVienTheoQuocGia", new {page=page, MaNuoc=@ViewBag.MaNuoc}),new X.PagedList.Web.Common.PagedListRenderOptions(){
+    LiElementClasses = new List<String> {"page-item"},
+    PageClasses = new List<String> {"page-link"}
+    })
+</div>

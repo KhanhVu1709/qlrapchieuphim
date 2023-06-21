@@ -1,0 +1,8 @@
+﻿@model DienVien
+<article class="movieofmonth item-post">
+    <div class="item-thumb"><a asp-controller="Home" asp-action="ChiTietDienVien" asp-route-maDienVien="@Model.MaDv" class="has-overlay"><img src="@Url.Content("~/film/imgDienVien/"+@Model.AnhDaiDien)"></a></div>
+    <h5><a href="/home/chitietdienvien">@Model.TenDv</a></h5>
+    <div class="text-content hidden-xs">
+        <p><strong><em>@Model.MoTa</em></strong></p>
+    </div>
+</article>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "GioChieu";
+    Layout = "~/Views/Shared/MuaVe.cshtml";
+}
+
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<Phim>
+
+@foreach (var item in Model)
+{
+    <li ng-repeat="movie in items.movies" ng-click="getCinemaByMovie(movie,$index)">
+        <a asp-action="ThemVe" asp-route-maPhim="@item.MaPhim" ng-class="{&quot;active&quot;:currentMovie==$index}" class="list-group-item movie">
+            <div class="showtimes-row">
+                <img style="width:40px; height:60px" src="../film/images/@item.AnhDaiDien">
+                <i class="{{getClassIcon(movie.age)}}"></i>
+                <div class="title-movie">
+                    <p class="upper-text ng-binding">@item.TenPhim</p>
+                    <!-- <p class="vn upper-text">{{movie.subName}}</p> -->
+                </div>
+            </div>
+        </a>
+    </li>
+}
+
+@Html.PagedListPager(Model,page=>Url.Action("MuaVes",new {page=page} ))
+

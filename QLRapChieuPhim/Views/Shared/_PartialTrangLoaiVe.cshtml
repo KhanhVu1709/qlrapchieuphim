@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LoaiVe>
+<tr ng-repeat-start="item in items" class="ng-scope">
+    @foreach(var item in Model)
+    {
+        <td>
+            <p><b class="ng-binding">@item.TenLv</b></p>
+        </td>
+        <td>
+            <div class="input-group input-booking">
+                <span class="input-group-btn">
+                    <button type="button">
+                        <span><i class="fa-solid fa-circle-minus"></i></span>
+                    </button>
+                </span>
+                <input style="width: 60px" type="number"
+                       ng-model="item.defaultQuantity"
+                       ng-disabled="disableInput(item)" ng-min="0"
+                       ng-max="8"
+                       class="form-control input-number ng-pristine ng-untouched ng-valid ng-empty ng-valid-min ng-valid-max">
+                <span class="input-group-btn">
+                    <button type="button">
+                        <span><i class="fa-solid fa-circle-plus"></i></span>
+                    </button>
+                </span>
+            </div>
+        </td>
+        <td class="ng-binding">@item.DonGia</td>
+        <td class="ng-binding">0</td>
+    }
+</tr>
+<!-- ngRepeat: bar in getBarcode(items[$index]) --><!-- end ngRepeat: item in items -->
+<tr class="total">
+    <td colspan="3" class="ng-binding">Tổng</td>
+    <td class="ng-binding">0</td>
+</tr>

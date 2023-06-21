@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LoaiPhim>
+
+<select style="height: 20px; padding: 10px;" multiple class="ng-pristine ng-valid ng-not-empty ng-touched">
+    @foreach (var item in Model)
+    {
+        var getUrl = "https://localhost:7017/api/apiphim/theloai/" + item.MaLp;
+        <option value="@item.MaLp" onclick="showPhimByTheLoaiPhim('@getUrl')">@item.LoaiPhim1</option>
+    }
+</select>
+
+
+<script>
+    function showPhimByTheLoaiPhim(getUrl) {
+        var str = '';
+        $.ajax({
+            type: 'GET',
+            url: getUrl,
+            dataType: 'json',
+            error: function (response) {
+                alert(response.responseText);
+            },
+            success: function (data) {
+                $.each(data, function (key, val) {
+                    str += `<article class="movieofmonth item-post">
+                                <div class="item-thumb">
+                                    <a href="/home/chitietphim?maPhim=${val.maPhim}" class="has-overlay">
+                                        <img src="../film/images/${val.anhDaiDien}" class="loading" data-was-processed="true">
+                                    </a>
+                                </div>
+                                    <h5>
+                                        <a href="/home/chitietphim?maPhim=${val.maPhim}">${val.tenPhim}</a>
+                                    </h5>
+
+                                <div class="text-content hidden-xs">
+                                    <p>${val.noiDung}</p>
+                                </div>
+                        </article>`;
+                });
+                $('#displayPhim').html(str);
+            }
+        });
+    }
+</script>

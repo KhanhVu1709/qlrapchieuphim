@@ -1,0 +1,619 @@
+﻿
+@{
+    ViewData["Title"] = "PhimDangChieu";
+    //Layout = "~/Views/Shared/_LayoutRapChieuPhim.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="vi" class="csstransforms3d">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Xem Phim Đang Chiếu Phim Hay Phim Mới Nhất Tại Rạp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta property="fb:admins" content="1692090397">
+    <meta property="fb:admins" content="100001920439162">
+    <meta property="fb:app_id" content="1427253957539434">
+    <meta property="og:url" content="https://www.galaxycine.vn/phim-dang-chieu">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Xem Phim Đang Chiếu Phim Hay Phim Mới Nhất Tại Rạp">
+    <meta property="og:image" content="https://www.galaxycine.vn/media/2023/3/7/470_1678130072333.jpg">
+    <meta property="og:description" content="Cập nhật lịch chiếu, giá vé thông tin của các Phim Đang Chiếu hot nhất tại cụm rạp Galaxy Cinema.">
+    <link rel="canonical" href="https://www.galaxycine.vn/phim-dang-chieu">
+    <link rel="shortcut icon" href="/favicon.ico?version=20201127001" type="image/x-icon">
+    <meta name="description" content="Cập nhật lịch chiếu, giá vé thông tin của các Phim Đang Chiếu hot nhất tại cụm rạp Galaxy Cinema.">
+    <meta name="robots" content="index, follow">
+    <!--script(src='//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=237651163112377&version=v2.0')-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;amp;subset=vietnamese" rel="stylesheet">
+    <!-- STYLES WEBSITE-->
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/animate.min.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/bootstrap.min.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/datepicker.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/flexslider.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/font-awesome.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/ie.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/jquery.bxslider.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/jquery.fancybox.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/normalize.min.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/css/screen.css?version=20201127001">
+    <link rel="stylesheet" href="../RapChieuPhim/website/main.css?version=20201127001">
+    <!-- STYLES WEBSITE END-->
+    <script type="text/javascript">
+        window.ENV = 'production';
+        try {
+            window.firebaseConfig = JSON.parse('{&quot;apiKey&quot;:&quot;AIzaSyB2JGN_huou7vLlrT10iojfan44-rZq0RY&quot;,&quot;authDomain&quot;:&quot;galaxy-cinema-9bf64.firebaseapp.com&quot;,&quot;databaseURL&quot;:&quot;https://galaxy-cinema-9bf64.firebaseio.com&quot;,&quot;projectId&quot;:&quot;galaxy-cinema-9bf64&quot;,&quot;storageBucket&quot;:&quot;galaxy-cinema-9bf64.appspot.com&quot;,&quot;messagingSenderId&quot;:&quot;694105011677&quot;,&quot;appId&quot;:&quot;1:694105011677:web:8412dc47db8edffec77234&quot;,&quot;measurementId&quot;:&quot;G-38CEXZ2PDR&quot;}'.replace(/&quot;/g, '"'))
+        } catch (e) { }
+    </script>
+    <script type="text/javascript">
+        window.ENV = 'production';
+    </script>
+    <script type="text/javascript">
+        window.clientid = "3da4eba4-94dd-4e74-bc25-38e89a01fe07";
+        window.grpcUrl = "https://www.galaxycine.vn:8080";
+        window.grpApiKey = "8f8ba0aa-7f69-41d7-8007-95ef585502c9";
+        window.recaptchaSiteKey = "6Ld2Bt0kAAAAABi6bNd-EmcSXY72C2nevGupxqRE";
+    </script>
+    <script src="../RapChieuPhim/js-app/grpc.js"></script>
+    <!-- SCRIPTS WEBSITE-->
+    <script src="../RapChieuPhim/js/angular.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-message-format.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-file-upload.min.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-translate.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-spinner.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-sanitize.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-cookies.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/angular-md5.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/moment.min.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/qrcode.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/ui-bootstrap-tpls.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/js/custom-copy.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/underscore.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/bootstrap.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/async.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/bootstrap-datepicker.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/gmaps.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.bcSwipe.min.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.bxslider.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.fancybox.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.mobile.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.rwdImageMaps.min.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/jquery.twbsPagination.min.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/platform.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/swipe-slide.min.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/dependencies/ua-parser.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/app.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/service/ApiService.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/service/GTMService.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/service/UtitService.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/autoFolded.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/buttonApply.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/buyTicket.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/captcha.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/chooseConcession.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/chooseConcessionMobile.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/choosePromotion.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/chooseTicket.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/chooseTicketMobile.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/countDownTime.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/currenty.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/datepicker.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/dialog.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/dropdown.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/formatTime.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/googleMap.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/iconMovieAge.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/loading.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/loginBtn.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/modal.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/newdatepicker.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/qrcode.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/rating.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/scrollFollowContent.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/searchBar.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/seatPlan.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/select.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/stickHeader.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/summaryTicket.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/directive/watchTrailer.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/applyRecruitment.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/bookingDetail.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/bookingPage.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/cinemaTicket.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/confirmConvertVIGPointController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/confirmPassword.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/contentMovie.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/convertVIGPointController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/convertVIGSuccessController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/forgetPass.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/header.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/location.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/login.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/movieDetailShowTime.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/navbar.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/policiesPopup.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/policyController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/post.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/promotion.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/purchaseSubscription.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/quickBuyTicket.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/rating.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/register.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/registerEmail.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/reviewMovie.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/search.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/subscriptionController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/support.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/supportPurchaseSubscription.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/supportPurchaseSubscriptionSuccess.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/userInfo.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/userSubscriptionController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/userTransaction.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/vigAnnouncementPopup.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/vigPointTransactionController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/controller/vigVoucherTransactionController.js?version=20201127001"></script>
+    <script src="../RapChieuPhim/website../RapChieuPhim/js/main.js?version=20201127001"></script>
+    <!-- SCRIPTS WEBSITE END-->
+    <!-- Hotjar Tracking Code for https://www.galaxycine.vn/-->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 2725587,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <!-- End Hotjar Tracking Code-->
+    <!-- Google Tag Manager-->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KTL6N2');
+    </script>
+    <!-- End Google Tag Manager-->
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+        var AppId = "b35bd0e4-1a04-4fb9-8bb9-085c5a7026d3";
+        if (AppId) {
+            var OneSignal = window.OneSignal || [];
+            OneSignal.push(["init", {
+                appId: AppId,
+                autoRegister: true,
+                notifyButton: {
+                    enable: false /* Set to false to hide */
+                }
+            }]);
+        }
+    </script>
+    
+    <script src="https://kit.fontawesome.com/c46ffd654b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body ng-app="appweb">
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KTL6N2" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
+    <div id="overlay"></div>
+    <span us-spinner="" spinner-key="spinner-1" spinner-start-active="false"></span>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=1427253957539434";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+        @await Html.PartialAsync("_PartialNavbar")
+
+            
+        
+        <div class="navicon"><a rel="external" href="#" class="nav-toggle"><span></span></a></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-movies">
+                        <div class="tab-movies-line">
+                            <ul class="nav nav-tabs">
+                                <li><a asp-action="_LayoutPhimDangChieu">Phim đang chiếu</a></li>
+                                <li class="active"><a asp-action="_LayoutPhimSapChieu">Phim sắp chiếu</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab_onshow" class="tab-pane active">
+                                    <div class="row watchmovie-group animated fadeInUp">
+
+                                        @await Html.PartialAsync("PartialPhimSapChieu")
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <section id="content-seo">
+                        <h3>Galaxy Cinema</h3>
+                        <div class="row content-seo">
+                            <div class="col-md-12">
+                                <div class="content-text">
+                                    <p style="margin:0in 0in 8pt">
+                                        <span style="font-size:14px;">
+                                            <span style="font-family:Arial,Helvetica,sans-serif;">
+                                                <span style="line-height:107%">
+                                                    <span style="line-height:107%"><span id="cke_bm_668S" style="display: none;">&nbsp;</span></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </p>
+
+                                    <p><span style="font-size:14px;">Khi m&ugrave;a tết đ&atilde; qua v&agrave; mọi người bắt đầu đi v&agrave;o luồng quay của c&ocirc;ng việc v&agrave; học tập th&igrave; c&aacute;c si&ecirc;u anh h&ugrave;ng cũng bắt đầu khởi động trong cuộc đua ph&ograve;ng v&eacute;. B&ecirc;n cạnh sự trở lại của Ant-man v&agrave; Shazam! Ch&uacute;ng ta c&ograve;n được la h&eacute;t hết m&igrave;nh c&ugrave;ng <a href="https://www.galaxycine.vn/phim-dang-chieu">phim mới</a>&nbsp;Scream 6 v&agrave; t&aacute;c phẩm ly k&igrave; giật g&acirc;n Missing.</span></p>
+
+                                    <p>&nbsp;</p>
+
+                                    <p><span style="font-size:14px;">Ant-Man and The Wasp: Quantumania (17.02)</span></p>
+
+                                    <p><span style="font-size:14px;">L&agrave; người h&ugrave;ng của thế giới trong Avengers: Engame, Ant-man lại kh&ocirc;ng nhận được sự ch&uacute; &yacute; đặc biệt m&agrave; c&ograve;n bị nhầm lẫn với Spider-man. Dẫu vậy anh vẫn rất tận hưởng cuộc sống, bỗng một ng&agrave;y, Cassie (Kathryn Newton) sử dụng một cỗ m&aacute;y để li&ecirc;n lạc v&agrave; v&ocirc; t&igrave;nh khiến cả gia đ&igrave;nh bị l&ocirc;i v&agrave;o thế giới lượng tử. Tại đ&acirc;y, Scott Lang (<a href="https://www.galaxycine.vn../RapChieuPhim/dien-vien/paul-rudd">Paul Rudd</a>) c&ugrave;ng Hope van Dyne (<a href="https://www.galaxycine.vn../RapChieuPhim/dien-vien/evangeline-lilly">Evangeline Lilly</a>) sẽ phải đối đầu với t&ecirc;n phản diện kh&eacute;t tiếng Kang the Conqueror (Jonathan Majors), phản diện lớn nhất The Multiverse Saga của Vũ trụ Marvel.</span></p>
+
+                                    <p><span style="font-size:14px;">Bộ <a href="https://www.galaxycine.vn/phim-dang-chieu">phim mới</a>&nbsp;được cầm trịch bởi đạo diễn Peyton Reed, đ&aacute;nh dấu sự quay trở lại của nh&oacute;m anh h&ugrave;ng t&iacute; hon. Sau một phase 4 g&acirc;y tranh c&atilde;i về chất lượng của Marvel th&igrave;&nbsp;Ant-Man and The Wasp: Quantumania sẽ l&agrave; bước đột ph&aacute; để vực dậy niềm tin của người h&acirc;m mộ đối với MCU. </span></p>
+
+                                    <p>&nbsp;</p>
+
+                                    <p><span style="font-size:14px;">Missing (24.02)</span></p>
+
+                                    <p><span style="font-size:14px;">Năm 2018, &quot;Searching&quot;&nbsp;ra mắt v&agrave; tạo n&ecirc;n cơn sốt tr&ecirc;n to&agrave;n thế giới. <a href="https://www.galaxycine.vn/phim-dang-chieu">Phim hay</a> kh&ocirc;ng chỉ th&agrave;nh c&ocirc;ng về mặt doanh thu m&agrave; c&ograve;n nhận v&ocirc; số lời khen ngợi của kh&aacute;n giả lẫn giới ph&ecirc; b&igrave;nh nhờ c&aacute;ch l&agrave;m phim độc đ&aacute;o khi kh&aacute;m ph&aacute; một vụ mất t&iacute;ch chỉ th&ocirc;ng qua m&agrave;n h&igrave;nh m&aacute;y t&iacute;nh &ndash; điện thoại. Tiếp nối phong c&aacute;ch ấn tượng tr&ecirc;n, phần hậu truyện độc lập mang t&ecirc;n &ldquo;Missing&rdquo; (Mất T&iacute;ch) sẽ kể một c&acirc;u chuyện ho&agrave;n to&agrave;n mới với quy m&ocirc; v&agrave; độ kịch t&iacute;nh c&ograve;n lớn hơn nhiều lần.</span></p>
+
+                                    <p><span style="font-size:14px;">Mẹ của June c&oacute; một kỳ nghỉ ở Colombia với người bạn trai mới quen, tuy nhi&ecirc;n khi đến ng&agrave;y trở về như đ&atilde; định, June kh&ocirc;ng thể li&ecirc;n lạc với b&agrave;. Bằng mọi quen biết v&agrave; khả năng sử dụng c&ocirc;ng nghệ của m&igrave;nh, June cố gắng t&igrave;m ra bằng được nguy&ecirc;n nh&acirc;n sự mất t&iacute;ch b&iacute; ẩn của mẹ.</span></p>
+
+                                    <p>&nbsp;</p>
+
+                                    <p><span style="font-size:14px;">Scream 6 (03.2023)</span></p>
+
+                                    <p><span style="font-size:14px;">Loạt <a href="https://www.galaxycine.vn/phim-dang-chieu">phim chiếu rạp</a>&nbsp;Scream&nbsp;bắt đầu từ năm 1996 với t&aacute;c phẩm kinh điển gốc của Wes Craven do nh&agrave; bi&ecirc;n kịch đang l&ecirc;n l&uacute;c bấy giờ l&agrave; Kevin Williamson chấp b&uacute;t. Sau khi nhận được hưởng ứng t&iacute;ch cực của phần đ&ocirc;ng kh&aacute;n giả, 4 phần phim hậu truyện đ&atilde; li&ecirc;n tục được cho ra mắt trong c&aacute;c năm tiếp theo, gồm&nbsp;Scream 2&nbsp;năm 1997,&nbsp;Scream 3&nbsp;năm 2000 v&agrave;&nbsp;Scream 4&nbsp;năm 2011, đ&acirc;y cũng l&agrave; bộ phim cuối c&ugrave;ng của Craven. V&agrave; từ l&uacute;c n&agrave;y, loạt phim đ&atilde; kh&ocirc;ng ra mắt th&ecirc;m phần phim n&agrave;o trong cả thập kỷ tiếp theo, ngoại trừ chương tr&igrave;nh MTV ngắn hạn&nbsp;Scream: The TV Series. Cho tới đầu 2022,&nbsp;Scream&nbsp;ch&iacute;nh thức được Paramount Pictures hồi sinh tại <a href="https://www.galaxycine.vn/">rạp chiếu phim</a>&nbsp;với phần&nbsp;thứ 5 v&agrave; đến giờ l&agrave; phần thứ 6.</span></p>
+
+                                    <p><span style="font-size:14px;">Tiếng Th&eacute;t 6&nbsp;lấy bối cảnh ở th&agrave;nh phố New York, nơi một số nh&acirc;n vật sống s&oacute;t sau c&aacute;c sự kiện của phần phim&nbsp;Scream&nbsp;thứ 5 chuyển đến, bao gồm con g&aacute;i của Billy Loomis, Sam Carpenter, em g&aacute;i của c&ocirc; Tara Carpenter, người bạn Mindy Meeks-Martin v&agrave; anh trai sinh đ&ocirc;i của c&ocirc; ấy Chad Meeks-Martin. Rời khỏi thị trấn Woodsboro &ndash; nơi diễn ra những vụ &aacute;n mạng Ghostface trong nhiều năm, nh&oacute;m bạn mong c&oacute; thể tho&aacute;t khỏi t&ecirc;n s&aacute;t nh&acirc;n kh&eacute;t tiếng n&agrave;y, nhưng họ lại kh&ocirc;ng thể ngờ, kh&ocirc;ng những kh&ocirc;ng chấm dứt m&agrave; điều n&agrave;y c&ograve;n mở ra một chương &aacute;m s&aacute;t kinh ho&agrave;n&nbsp;ho&agrave;n to&agrave;n mới.</span></p>
+
+                                    <p>&nbsp;</p>
+
+                                    <p><span style="font-size:14px;">Shazam! Fury of the Gods (17.03)</span></p>
+
+                                    <p><span style="font-size:14px;">Vũ trụ điện ảnh DC sẽ khởi đầu năm 2023 với sự trở lại của si&ecirc;u anh h&ugrave;ng Billy Batson trong bom tấn&nbsp;Shazam! Fury of the Gods. Lần n&agrave;y, Billy, c&ugrave;ng với những người anh chị em của m&igrave;nh, sẽ phải đối đầu với những mối đe dọa lớn hơn rất nhiều so với phần phim đầu ti&ecirc;n: Đ&oacute; ch&iacute;nh l&agrave; 3 &aacute;i nữ của Atlas - thần Titan trụ trời với nguồn thể lực dồi d&agrave;o bất tận.</span></p>
+
+                                    <p><span style="font-size:14px;">Trong lần trở lại n&agrave;y, cậu ch&agrave;ng Shazam vẫn trăn trở&nbsp;cho rằng m&igrave;nh &ldquo;kh&ocirc;ng xứng đ&aacute;ng với năng lực n&agrave;y&rdquo;. Thế giới&nbsp;c&oacute; The Flash nhanh như chớp với bộ suit đỏ đặc trưng,&nbsp;Aquaman to cao lực lưỡng v&agrave; cả Batman si&ecirc;u ngầu. Trong khi đ&oacute;, Shazam vẫn chỉ l&agrave; Shazam chẳng c&oacute; năng lực g&igrave; kh&aacute;c biệt&hellip; hoặc l&agrave; Billy Batson, một cậu nh&oacute;c trung học trong th&acirc;n h&igrave;nh một si&ecirc;u anh h&ugrave;ng cao to gi&agrave; đời, kh&ocirc;ng thể kiểm so&aacute;t sức mạnh của m&igrave;nh. Nếu như c&aacute;c si&ecirc;u anh h&ugrave;ng kh&aacute;c khiến kh&aacute;n giả kh&ocirc;ng khỏi trầm trồ v&igrave; những năng lực si&ecirc;u ph&agrave;m c&oacute; thể cứu thế giới&nbsp;th&igrave; &ldquo;cậu nh&oacute;c&rdquo; Shazam, mỗi khi d&ugrave;ng si&ecirc;u năng lực vẫn hậu đậu như một &ldquo;ch&uacute; hề&rdquo; lừng danh.</span></p>
+
+                                    <p>&nbsp;</p>
+
+                                    <p><span style="font-size:14px;">65 / Trận Chiến Thời Tiền Sử (10.03)</span></p>
+
+                                    <p><span style="font-size:14px;">Sau th&ocirc;ng b&aacute;o tr&igrave; ho&atilde;n, dự &aacute;n độc đ&aacute;o với sự g&oacute;p mặt của ng&ocirc;i sao Quả Cầu V&agrave;ng 2019 - Adam Driver được ph&aacute;t h&agrave;nh bởi Sony Releasing đ&atilde; ra mắt với t&ecirc;n ch&iacute;nh thức &ldquo;65&rdquo;.&nbsp;<a href="https://www.galaxycine.vn/phim-dang-chieu">Phim mới</a> được nh&agrave;o nặn bởi bộ đ&ocirc;i đạo diễn v&agrave; bi&ecirc;n kịch l&agrave;m n&ecirc;n th&agrave;nh c&ocirc;ng của si&ecirc;u phẩm &ldquo;A Quite Place&rdquo;, hứa hẹn sẽ khiến kh&aacute;n giả điện ảnh nức l&ograve;ng với &yacute; tưởng &ldquo;xuy&ecirc;n kh&ocirc;ng&rdquo; th&uacute; vị, hồi hộp v&agrave; phần diễn xuất chất lượng của Adam Driver.</span></p>
+
+                                    <p><span style="font-size:14px;">C&acirc;u chuyện xảy ra sau c&uacute; va chạm thảm khốc, t&agrave;u vũ trụ của Mills (Adam Driver) bay thẳng đến một h&agrave;nh tinh kh&ocirc;ng x&aacute;c định. Với kiến thức nhạy b&eacute;n của m&igrave;nh, Mills nhanh ch&oacute;ng nhận ra h&agrave;nh tinh kh&ocirc;ng x&aacute;c định n&agrave;y ch&iacute;nh l&agrave; Tr&aacute;i Đất của 65 triệu năm trước. Liệu với những c&ocirc;ng nghệ tương lai đang c&oacute;, Mills c&oacute; thể sống s&oacute;t trước những lo&agrave;i khủng long v&agrave; sinh vật tiền sử đ&aacute;ng sợ?</span></p>
+
+                                    <p>&nbsp;</p>
+
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--include home/home.jade-->
+    
+    @await Html.PartialAsync("PartialFooter")
+
+    <div ng-controller="loginController">
+        <div id="login-modal" class="modal fade">
+            <div ng-if="openLogin" class="modal-dialog">
+                <div class="modal-outer-container">
+                    <div class="modal-middle-container">
+                        <div class="login-wrapper animated slideInDown">
+                            <div class="login-container">
+                                <span ng-click="closeModel()" class="close"><i class="icon-cancel"></i></span>
+                                <div class="tab-login-line">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a id="a_tab_login_1" href="#tab_login_1" data-toggle="tab">Đăng nhập</a></li>
+                                        <li><a class="line">/</a></li>
+                                        <li><a id="a_tab_login_2" href="#tab_login_2" data-toggle="tab">Đăng ký</a></li>
+                                    </ul>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="tab-content">
+                                                <div id="tab_login_1" class="tab-pane active">
+                                                    <div class="login-tab-wrapper">
+                                                        <div class="login-heading">
+                                                            <div class="text-heading">
+                                                                <span ng-if="!enableSkip" class="sub-text">Vui lòng đăng nhập trước khi mua vé để tích luỹ điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên Galaxy Cinema.</span><span ng-if="enableSkip"
+                                                                                                                                                                                                                                                     class="sub-text">Bạn có thể mua vé mà không cần đăng nhập. Tuy nhiên, bạn sẽ không được tích luỹ điểm thành viên.</span>
+                                                            </div>
+                                                            <p ng-if="message" class="message">{{message}}</p>
+                                                        </div>
+                                                        <form ng-submit="submit()" class="login-form">
+                                                            <input placeholder="Email" type="email" ng-model="userInfo.email" required class="login"><input placeholder="Mật khẩu" type="password" ng-model="userInfo.password" required class="login">
+                                                            <div class="login-remember">
+                                                                <!--.remember-->
+                                                                <!--  .toggle-button.toggle-button-login-->
+                                                                <!--    input#toggleRemember(type='checkbox' ng-model='userInfo.remember')-->
+                                                                <!--    label(for='toggleRemember') Ghi nhớ-->
+                                                                <!--    .toggle-button-icon-->
+                                                                <div class="forget-pass"><a id="forgetPass" href="" ng-click="openForgetPass()">Quên mật khẩu?</a></div>
+                                                                <div style="float: right" ng-if="userNotActive == true" class="forget-pass"><a href="" ng-click="reSendActiveCode()">Gửi lại link kích hoạt</a></div>
+                                                            </div><button class="btn primary input"><i ng-show="isSubmit" class="fa fa-pulse fa-spinner"></i>Đăng nhập</button>
+                                                            <div ng-if="enableSkip" class="divider-line"></div><a href="javascript:;" ng-if="enableSkip" ng-click="closeModel()" class="btn primary input">Mua vé không đăng nhập</a>
+                                                            <!--.social-login-->
+                                                            <!--  span Hoặc đăng nhập bằng-->
+                                                            <!--  a(href='')-->
+                                                            <!--    i.icon-facebook-->
+                                                            <!--  a(href='')-->
+                                                            <!--    i.icon-google-plus-->
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div id="tab_login_2" ng-controller="registerController" class="tab-pane">
+                                                    <div class="login-tab-wrapper">
+                                                        <div ng-if="message" class="login-heading">
+                                                            <div class="text-heading">
+                                                                <!--span.sub-text.error {{message}}-->
+                                                                <p class="message">{{message}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="login-form">
+                                                            <form ng-if="registerStep == &quot;register&quot;" ng-submit="submitOTP()">
+                                                                <input placeholder="Họ tên" type="text" ng-model="user.fullName" required class="login first">
+                                                                <div class="row city">
+                                                                    <div class="col-md-6 col-sm-6 col-xs-6 first-col"><input type="text" placeholder="Số điện thoại" maxlength="14" ng-model="user.mobilePhone" required class="login register-input"></div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-6 second-col mt-14">
+                                                                        <galaxy-select ng-model="genderSelect"></galaxy-select>
+                                                                    </div>
+                                                                </div><input type="email" placeholder="Email" ng-model="user.email" required class="login register-input remove-mb">
+                                                                <div class="row city">
+                                                                    <div class="col-md-6 col-sm-6 col-xs-6 first-col"><input type="password" placeholder="Mật khẩu" ng-model="user.password" required class="login"></div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-6 second-col"><input type="password" placeholder="Xác nhận mật khẩu" ng-model="user.confirmPassword" required class="login"></div>
+                                                                </div>
+                                                                <div class="row birthday-signup">
+                                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                        <galaxy-datepicker ng-model="user.dateOfBirth"></galaxy-datepicker>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="text-confirm-signup">Tôi đã đọc và đồng ý với&nbsp<a ng-click="openPolicy()" data-toggle="modal" data-target="#popupPolicies"><b>CHÍNH SÁCH&nbsp</b></a>của chương trình.&nbsp</p><br><button class="btn primary input">Đăng ký</button>
+                                                            </form>
+                                                            <div ng-if="registerStep == 'otp'" class="login-container">
+                                                                <div class="tab-login-line">
+                                                                    <div class="tab-login-title">Vui lòng nhập OTP</div>
+                                                                    <div class="login-tab-wrapper">
+                                                                        <div class="login-heading success">
+                                                                            <div class="login-form">
+                                                                                <form ng-submit="submit()">
+                                                                                    <input placeholder="Nhập OTP" type="text" ng-model="user.code" class="login first"><button class="btn primary input">Kiểm tra</button>
+                                                                                    <div class="text-heading">
+                                                                                        <p ng-if="otpCountDown &gt; 0"><span id="count-down-otp-register" class="sub-text"></span>Gửi lại OTP sau: {{ otpCountDown }}</p>
+                                                                                    </div>
+                                                                                    <div class="text-heading"><span class="sub-text">Bạn vui lòng truy cập tin nhắn để nhận OTP</span></div>
+                                                                                </form>
+                                                                            </div><button ng-if="otpCountDown == 0" ng-click="recallOTP()" class="btn secondary input"><span id="count-down-otp-aa" class="sub-text"></span>Gửi lại OTP</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-controller="forgetPassController">
+            <div id="forgetpass-modal" style="z-index:1111;" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-outer-container">
+                        <div class="modal-middle-container">
+                            <div class="login-wrapper animated slideInDown">
+                                <div class="login-container">
+                                    <span ng-click="closeModelForget()" class="close"><i class="icon-cancel"></i></span>
+                                    <div class="tab-login-line">
+                                        <div class="tab-login-title">Quên mật khẩu</div>
+                                        <div class="login-tab-wrapper">
+                                            <div class="login-heading">
+                                                <div class="text-heading"><span class="sub-text">Vui lòng cung cấp email đăng nhập, chúng tôi sẽ gửi link kích hoạt cho bạn.</span></div>
+                                            </div>
+                                            <p ng-if="message" class="message">{{message}}</p>
+                                            <form ng-submit="submit()" class="login-form">
+                                                <input placeholder="Email" type="email" ng-model="item.email" required class="login">
+                                                <div class="row captcha">
+                                                    <div class="col-md-6 col-sm-6 col-xs-8 first-col">
+                                                        <galaxy-captcha data-config="captchaConfig"></galaxy-captcha>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-4 second-col"><input placeholder="Nhập mã captcha" type="text" ng-model="item.captcha" required class="login"></div>
+                                                </div><button class="btn primary input"><i ng-show="isSubmit" class="fa fa-pulse fa-spinner"></i>Cấp lại mật khẩu</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#success-modal(style='display: none;')-->
+        <div ng-controller="registerController">
+            <div id="success-modal" style="z-index:1111;" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-outer-container">
+                        <div class="modal-middle-container">
+                            <div class="login-wrapper animated slideInDown">
+                                <div class="login-container">
+                                    <span ng-click="closeModelSuccess()" class="close"><i class="icon-cancel"></i></span>
+                                    <div class="tab-login-line">
+                                        <div class="tab-login-title">Đăng ký thành công</div>
+                                        <div class="login-tab-wrapper">
+                                            <div class="login-heading success">
+                                                <i class="icon-success"></i>
+                                                <div class="text-heading"><span class="sub-text">Chào mừng đến G-Star Club!</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--include active-->
+    </div>
+    <div id="trailerModal" class="modal fade modal-trailer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                    <h4 class="modal-title">Galaxy Cinema</h4>
+                </div>
+                <div id="galaxyVideo" class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <div ng-controller="locationController">
+        <div id="location-modal" style="display: none;" class="login-overlay">
+            <div class="modal-outer-container">
+                <div class="modal-middle-container">
+                    <div class="login-wrapper animated slideInDown location">
+                        <div class="login-container">
+                            <span class="close"><i class="icon-cancel"></i></span>
+                            <h2>Chọn thành phố</h2>
+                            <div class="tab-login-line">
+                                <div class="login-tab-wrapper">
+                                    <div class="login-heading">
+                                        <div class="text-heading"><span class="sub-text">Vui lòng chọn thành phố hiện tại của bạn để xem lịch chiếu chính xác nhất.</span></div>
+                                    </div>
+                                    <form ng-submit="submit()" class="login-form">
+                                        <div class="row city">
+                                            <div class="col-md-7 col-sm-7 col-xs-12 first-col">
+                                                <galaxy-select ng-model="citySelect"></galaxy-select>
+                                            </div>
+                                            <div class="col-md-5 col-sm-5 col-xs-12 second-col"><button class="btn primary input location">Tiếp tục</button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addcv-modal" ng-controller="applyRecruitmentController" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-outer-container">
+                <div class="modal-middle-container">
+                    <div class="login-wrapper location">
+                        <div class="login-container">
+                            <span ng-click="closeModel()" class="close"><i class="icon-cancel"></i></span>
+                            <h2 class="recruitment">Nộp hồ sơ tuyển dụng</h2>
+                            <div class="tab-login-line">
+                                <div class="login-tab-wrapper">
+                                    <div ng-if="message" class="login-heading">
+                                        <div class="text-heading">
+                                            <p class="message">{{message | translate}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="recruitment-form">
+                                        <form ng-submit="submit()">
+                                            <input id="name" placeholder="Họ và tên" type="text" ng-model="cvinfo.name" required class="login"><input id="email" type="email" placeholder="Email" required ng-model="cvinfo.email" class="login"><input id="title"
+                                                                                                                                                                                                                                                        type="text" placeholder="Tiêu đề" required ng-model="cvinfo.subject" class="login"><textarea rows="10" placeholder="Nội dung" ng-model="cvinfo.message" required class="support-form"></textarea><input id="attachfile"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                type="file" nv-file-select uploader="uploader" class="login">
+                                            <div class="row captcha">
+                                                <div class="col-md-6 col-sm-6 col-xs-6 first-col">
+                                                    <galaxy-captcha data-config="captchaConfig"></galaxy-captcha>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6 second-col"><input id="capcha" placeholder="Nhập mã captcha" name="captcha" type="text" ng-model="cvinfo.captcha" required class="login"></div>
+                                            </div><button class="btn primary input"><i ng-show="isSubmit" class="fa fa-pulse fa-spinner"></i>Nộp hồ sơ</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupPolicies" ng-controller="policiesPopupController" style="z-index: 1100" class="dialog modal fade">
+        <div class="modal-dialog">
+            <div class="modal-outer-container">
+                <div class="modal-middle-container">
+                    <div class="login-wrapper animated bounceIn location">
+                        <div class="login-container dialog">
+                            <span ng-click="closeModel()" class="close"><i class="icon-cancel"></i></span>
+                            <h2>Chính sách</h2>
+                            <div id="policiesTab">
+                                <div ng-controller="policyController" class="tab-movies-line">
+                                    <ul class="nav nav-tabs">
+                                        <li ng-repeat="(key, item) in info" class="{{key == 0 ? 'active' : ''}}"><a href="#tab_{{item.id}}_popup" data-toggle="tab">{{item.name}}</a></li>
+                                    </ul>
+                                    <div class="tab-content content-text">
+                                        <div ng-repeat="(key, item) in info" id="tab_{{item.id}}_popup" class="{{key == 0 ? 'active' : '' + item.slug == 'huong-dan' ? 'scroll-content' : ''}} tab-pane">
+                                            <div ng-bind-html="item.description" class="policy-content"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <galaxy-dialog></galaxy-dialog>
+    <script src="../RapChieuPhim/customjs-min/lazyload.js" async></script>
+    <script>
+        window.lazyLoadOptions = {
+            img: ".lazy"
+        };
+    </script>
+    <!--include ../popup/dialog-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app-check.js"></script>
+    <script src="../RapChieuPhim/js/axios.min.js"></script>
+    <script src="../RapChieuPhim/js/lodash-merge.js"></script>
+    <script src="../RapChieuPhim/customjs-min/firebase-setup.js"></script>
+</body>
+
+</html>

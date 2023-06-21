@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "GiaoDich";
+    Layout = "~/Views/Shared/GiaoDichKH.cshtml";
+}
+@using QLRapChieuPhim.Models.LienKetModels;
+@model List<GiaoDichModel>
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="table-responsive">
+            <table class="table member-table table-striped">
+                <thead valign="top">
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Mã vé</th>
+                        <th>Phim</th>
+                        <th>Chú thích</th>
+                        <th>Giá trị</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                    <tr>
+                        <td><span style="">@item.NgayBanVe</span></td>
+                        <td><span style="">@item.MaVe</span></td>
+                        <td><span style="">@item.TenPhim</span></td>
+                        <td><span style=""></span></td>
+                        <td><span style=""></span></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+

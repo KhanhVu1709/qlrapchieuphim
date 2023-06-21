@@ -1,0 +1,14 @@
+﻿@model Phim
+<article class="movieofmonth item-post">
+    <div class="item-thumb">
+        <a asp-controller="Home" asp-action="ChiTietPhim" asp-route-maPhim="@Model.MaPhim" class="has-overlay">
+            <img src=" @Url.Content("../film/images/" + @Model.AnhDaiDien)" class="loading" data-was-processed="true">
+        </a>
+    </div><h5>
+        <a href="/home/chitietphim?maPhim=@Model.MaPhim">@Model.TenPhim</a>
+    </h5>
+
+    <div class="text-content hidden-xs">
+        <p>@Model.NoiDung</p>
+    </div>
+</article>

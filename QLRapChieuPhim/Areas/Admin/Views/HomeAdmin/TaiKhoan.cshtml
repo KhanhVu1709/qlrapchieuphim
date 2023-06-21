@@ -1,0 +1,84 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "TaiKhoan";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using QLRapChieuPhim.Models;
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<User>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="get" asp-action="TaiKhoan">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Tài khoản: </label>
+                <input type="Text" class="form-control mx-sm-3" value="@ViewBag.Keyword" name="searchString" placeholder="Nhập tài khoản">
+            </div>
+            <div class="form-group mt-1">
+                <input type="submit" value="Tìm tài khoản" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<h1>Tài khoản</h1>
+
+<p>
+    <a asp-controller="admin" asp-action="ThemTaiKhoan">Thêm mới tài khoản</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-primary">
+            <th>
+                Tài khoản
+            </th>
+            <th>
+                Mật khẩu
+            </th>
+            <th>
+                Loại tài khoản (1: Nhân viên hoặc 2: Khách hàng)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string cla = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            cla = "table-success";
+            i += 1;
+            if (i % 2 == 0)
+            {
+                cla = "table-warning";
+            }
+            <tr class="@cla">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiUser)
+                </td>
+                <td>
+                    <a asp-action="SuaTaiKhoan" asp-route-username="@item.Username">Sửa</a> |
+                    <a asp-action="XoaTaiKhoan" asp-route-username="@item.Username">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="margin: 0 auto">
+    @Html.PagedListPager(Model,page => Url.Action("TaiKhoan", new {page=page}),new X.PagedList.Web.Common.PagedListRenderOptions(){
+    LiElementClasses = new List<String> {"page-item"},
+    PageClasses = new List<String> {"page-link"}
+    })
+</div>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<QuocGia>
+
+
+<select style="height: 20px; padding: 10px;" multiple class="ng-pristine ng-valid ng-not-empty ng-touched">
+    @foreach (var quocgia in Model)
+    {
+        var getUrl = "https://localhost:7017/api/dienvienapi/" + quocgia.MaNuoc;
+        <option value="@quocgia.MaNuoc" onclick="showDienVienByCountry('@getUrl')">@quocgia.TenNuoc</option>
+    }
+</select>
+
+
+<script>
+
+    function showDienVienByCountry(getUrl) {
+        var str = '';
+        $.ajax({
+            type: 'GET',
+            url: getUrl,
+            dataType: 'json',
+            error: function (response) {
+                alert(response.responseText);
+            },
+            success: function (data) {
+                $.each(data, function (key, val) {
+                    str += `
+                                        <article class="movieofmonth item-post">
+                                            <div class="item-thumb">
+                                                <a href="/Home/ChiTietDienVien/?maDienVien=${val.maDv}" class="has-overlay">
+                                                    <img src="/film/imgDienVien/${val.anhDaiDien}">
+                                                </a>
+                                            </div>
+                                            <h5><a href="/home/chitietdienvien/">${val.tenDv}</a></h5>
+                                            <div class="text-content hidden-xs">
+                                                <p><strong><em>${val.moTa}</em></strong></p>
+                                            </div>
+                                        </article>
+                            `;
+
+                });
+                $('#offerevent').html(str);
+            }
+        });
+    }
+</script>

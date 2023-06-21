@@ -1,0 +1,26 @@
+﻿@using X.PagedList.Mvc.Core;
+@using QLRapChieuPhim.Models;
+@model X.PagedList.IPagedList<Phim>
+@foreach (var item in Model.Where(x => x.NgayKhoiChieu >= DateTime.Today.AddDays(-7) && x.NgayKhoiChieu <= DateTime.Today).Take(6))
+{
+        <div class="col-md-4 col-sm-4 col-xs-6 movie-item">
+            <div class="article-movie-home">
+                <img style="width: 300px;" data-src="@Url.Content("../film/images/" + item.AnhDaiDien)" class="lazy" />
+                <a href="../rapchieuphim/dat-ve/demon-slayer-to-the-swordsmith-village.html">
+                    <div class="decription-hover overlay">
+                        <div class="movies-content">
+                            <i class="icon-c13"></i>
+                            <div class="group">
+                            <div class="btn secondary-white"><a href="/home/muaves">mua vé</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="title-movie">
+                <h4 class="upper-text">@item.TenPhim</h4>
+            </div>
+        </div>
+}
+
